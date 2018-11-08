@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 
 const Header = props => {
-  const { viewStyle, TextStyle } = style;
+  const { viewStyle, TextStyle } = styles;
   return (
     <View style={viewStyle}>
       <Text style={TextStyle}>{props.headerText}</Text>
@@ -10,7 +10,7 @@ const Header = props => {
   );
 };
 
-const style = {
+const styles = {
   viewStyle: {
     justifyContent: "center",
     alignItems: "center",

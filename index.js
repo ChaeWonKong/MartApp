@@ -1,9 +1,15 @@
 import React from "react";
-import { Text, AppRegistry } from "react-native";
-import Header from "./src/header";
+import { View, Text, AppRegistry } from "react-native";
+import Header from "./src/Header";
+import ItemList from "./src/ItemList";
 
 const App = () => {
-  return <Header headerText="로컬마트" />;
+  return (
+    <View>
+      <Header headerText="로컬마트" />
+      <ItemList />
+    </View>
+  );
 };
 
 AppRegistry.registerComponent("MartApp", () => App);

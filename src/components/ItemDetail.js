@@ -1,7 +1,6 @@
 import React from "react";
 import { Text } from "react-native";
-import Card from "./Card";
-import CardSection from "./CardSection";
+import { Card, CardSection } from "./common";
 
 const ItemDetail = props => {
   const { title } = props.item;

@@ -1,26 +1,32 @@
 import React, { Component } from "react";
-import { WebView } from "react-native";
+import { View, WebView } from "react-native";
+import MartList from "./MartList";
 
-export default class MapView extends Component {
+class MapView extends Component {
   render() {
+    const { container, webViewContainer } = styles;
     return (
-      <WebView
-        originWhitelist={["*"]}
-        source={{
-          uri: "http://localhost:5000"
-        }}
-        style={styles.webViewContainer}
-      />
+      <View style={container}>
+        <View style={webViewContainer}>
+          <WebView
+            source={{
+              uri: "http://localhost:3000"
+            }}
+          />
+        </View>
+        <MartList />
+      </View>
     );
   }
 }
 
 const styles = {
+  container: {
+    flex: 1
+  },
   webViewContainer: {
-    flex: 1,
-    marginTop: 10,
-    marginLeft: 10,
-    marginRight: 10,
-    marginBottom: 10
+    flex: 1
   }
 };
+
+export default MapView;

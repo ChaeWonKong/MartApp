@@ -6,7 +6,9 @@ export default class MapView extends Component {
     return (
       <WebView
         originWhitelist={["*"]}
-        source={{ uri: "https://map.naver.com" }}
+        source={{
+          uri: "http://localhost:5000"
+        }}
         style={styles.webViewContainer}
       />
     );
